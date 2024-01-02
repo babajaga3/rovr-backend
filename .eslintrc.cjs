@@ -1,9 +1,12 @@
 module.exports = {
 	'env': {
-		'browser': true,
+		'node': true,
 		'es2021': true
 	},
-	'extends': 'eslint:recommended',
+	'extends': [
+		'eslint:recommended',
+		'plugin:@typescript-eslint/recommended'
+	],
 	'overrides': [
 		{
 			'env': {
@@ -21,6 +24,7 @@ module.exports = {
 		'ecmaVersion': 'latest',
 		'sourceType': 'module'
 	},
+	'parser': '@typescript-eslint/parser',
 	'plugins': ['import'],
 	'rules': {
 		'import/order': ['error', {
