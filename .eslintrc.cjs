@@ -37,7 +37,6 @@ module.exports = {
 				}
 			],
 			'pathGroupsExcludedImportTypes': ['builtin'],
-			'newlines-between': 'never',
 			'alphabetize': {
 				'order': 'asc',
 				'caseInsensitive': true
