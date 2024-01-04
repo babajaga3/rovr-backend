@@ -12,6 +12,9 @@ app.use(cors())
 app.use(morgan('dev'))
 
 app.use('/api', routes)
+app.get('/', (_req, res) => {
+	res.send('Welcome dear stranger to my backend :)')
+})
 
 app.listen(PORT, () => {
 	console.log(`🚀 Server running on port ${PORT}`)
