@@ -14,6 +14,9 @@ const routes_1 = __importDefault(require("./app/routes"));
 app.use((0, cors_1.default)());
 app.use((0, morgan_1.default)('dev'));
 app.use('/api', routes_1.default);
+app.get('/', (_req, res) => {
+    res.send('Welcome dear stranger to my backend :), how re ya doing this fine day?');
+});
 app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
 });
