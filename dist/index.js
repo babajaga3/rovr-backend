@@ -13,12 +13,6 @@ const PORT = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : 8080;
 const routes_1 = __importDefault(require("./app/routes"));
 app.use((0, cors_1.default)());
 app.use((0, morgan_1.default)('dev'));
-app.use((_req, res, next) => {
-    res.setHeader('Cache-Control', 'no-store');
-    res.setHeader('Pragma', 'no-cache');
-    res.setHeader('Expires', '0');
-    next();
-});
 app.use('/api', routes_1.default);
 app.get('/', (_req, res) => {
     res.send('Welcome dear stranger to my backend :), how re ya doing this fine day?');
