@@ -10,6 +10,12 @@ import routes from './app/routes'
 
 app.use(cors())
 app.use(morgan('dev'))
+app.use((_req, res, next) => {
+	res.setHeader('Cache-Control', 'no-store')
+	res.setHeader('Pragma', 'no-cache')
+	res.setHeader('Expires', '0')
+	next()
+})
 
 app.use('/api', routes)
 app.get('/', (_req, res) => {
