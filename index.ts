@@ -13,7 +13,7 @@ app.use(morgan('dev'))
 
 app.use('/api', routes)
 app.get('/', (_req, res) => {
-	res.send('Welcome dear stranger to my backend :)')
+	res.send('Welcome dear stranger to my backend :), how re ya doing this fine day?')
 })
 
 app.listen(PORT, () => {
