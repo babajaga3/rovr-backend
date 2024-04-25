@@ -5,6 +5,6 @@
     "target": "es6",
 		"esModuleInterop": true,
   },
-  "include": ["api/**/*"],
+  "include": ["api/**/*", "app"],
   "exclude": ["node_modules", "dist"]
 }
